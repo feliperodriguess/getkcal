@@ -3,11 +3,13 @@ const form = document.getElementById('form')
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const gender = document.getElementById('gender').options[gender.selectedIndex].value
+    const queryGender = document.getElementById('gender')
+    const gender = queryGender.options[queryGender.selectedIndex].value
     const age = Number(document.getElementById('age').value)
     const weight = Number(document.getElementById('weight').value)
     const height = Number(document.getElementById('height').value)
-    const activityLevel = document.getElementById('activity_level').options[selectedIndex].value
+    const queryActivity = document.getElementById('activity_level')
+    const activityLevel = queryActivity.options[queryActivity.selectedIndex].value
 
     const metabolicRate = Math.round(
         gender === 'female' ?
